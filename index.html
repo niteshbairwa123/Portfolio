@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nitesh Bairwa | Software Developer & IT Student</title>
+    <meta name="description" content="Portfolio of Nitesh Bairwa, B.Tech IT student at RGIPT, passionate software developer skilled in Python, JavaScript, React, and more.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursorFollower"></div>
+
+    <!-- Loader -->
+    <div class="loader" id="loader">
+        <div class="loader-inner">
+            <div class="loader-code">
+                <span class="code-bracket">{</span>
+                <span class="loader-name">NB<span class="dot">.</span></span>
+                <span class="code-bracket">}</span>
+            </div>
+            <div class="loader-bar"><div class="loader-fill"></div></div>
+            <span class="loader-label">Initializing Portfolio...</span>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <a href="#home" class="logo">NB<span class="logo-dot">.</span></a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#education" class="nav-link">Education</a></li>
+            <li><a href="#experience" class="nav-link">Experience</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#hobbies" class="nav-link">Hobbies</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <a href="#contact" class="nav-cta">Hire Me</a>
+        <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">
+            <span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <!-- Animated Grid -->
+        <div class="hero-grid"></div>
+        <!-- Glowing Orbs -->
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+
+        <div class="hero-content">
+            <div class="hero-tag">
+                <span class="tag-dot"></span>
+                <span class="tag-text"><span class="tag-comment">// </span>open to internships &amp; collabs</span>
+            </div>
+            <h1 class="hero-title">
+                <span class="title-line"><span class="reveal-text hi-line">Hey, I'm</span></span>
+                <span class="title-line"><span class="reveal-text name-grad">Nitesh Bairwa</span></span>
+            </h1>
+            <div class="hero-role">
+                <span class="role-prefix">I build</span>
+                <div class="type-wrapper">
+                    <span class="typewriter" id="typewriter"></span>
+                    <span class="cursor-blink">|</span>
+                </div>
+            </div>
+            <p class="hero-desc">
+                3rd-year <strong>B.Tech IT</strong> student at RGIPT who writes code by day and sings on stage by night. I like turning ideas into real products — whether that's a data pipeline, a web app, or a college cultural fest with 1000+ people.
+            </p>
+            <div class="hero-chips">
+                <span class="hero-chip"><i class="fa-solid fa-terminal"></i> currently learning: DSA + React</span>
+                <span class="hero-chip chip-loc"><i class="fa-solid fa-location-dot"></i> Jais, UP, India</span>
+            </div>
+            <div class="hero-actions">
+                <a href="#projects" class="btn btn-primary">
+                    <span>View Projects</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="#contact" class="btn btn-outline">
+                    <span>Let's Talk</span>
+                </a>
+            </div>
+            <div class="hero-socials">
+                <a href="https://github.com/niteshbairwa123" target="_blank" rel="noopener" class="social-pill"><i class="fa-brands fa-github"></i> GitHub</a>
+                <a href="https://www.linkedin.com/in/nitesh-bairwa-9201ab259/" target="_blank" rel="noopener" class="social-pill"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                <a href="https://www.instagram.com/niteshghunawat0786" target="_blank" rel="noopener" class="social-pill"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                <a href="mailto:22it3027@rgipt.ac.in" class="social-pill"><i class="fa-solid fa-envelope"></i> Email</a>
+            </div>
+        </div>
+
+
+        <!-- Code Floating Card -->
+        <div class="hero-code-card" id="codeCard">
+            <div class="code-card-header">
+                <div class="code-dot red"></div>
+                <div class="code-dot yellow"></div>
+                <div class="code-dot green"></div>
+                <span class="code-filename">nitesh.py</span>
+            </div>
+            <pre class="code-body"><span class="c-keyword">class</span> <span class="c-class">NiteshBairwa</span>:
+  <span class="c-keyword">def</span> <span class="c-func">__init__</span>(self):
+    self.role = <span class="c-str">"Full Stack Dev"</span>
+    self.college = <span class="c-str">"RGIPT"</span>
+    self.cgpa = <span class="c-num">6.02</span>
+    self.skills = [
+      <span class="c-str">"Python"</span>, <span class="c-str">"React"</span>,
+      <span class="c-str">"Node.js"</span>, <span class="c-str">"ML"</span>
+    ]
+
+  <span class="c-keyword">def</span> <span class="c-func">get_status</span>(self):
+    <span class="c-keyword">return</span> <span class="c-str">"Building cool stuff 🚀"</span></pre>
+        </div>
+
+        <div class="scroll-hint">
+            <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+            <span>Scroll to explore</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-label"><span class="label-num">01</span> About Me</div>
+            <div class="about-grid">
+                <div class="about-photo-wrap">
+                    <div class="photo-bg-shape"></div>
+                    <div class="about-photo">
+                        <img src="nitesh_photo.jpg" alt="Nitesh Bairwa"
+                            onerror="this.src='https://ui-avatars.com/api/?name=Nitesh+Bairwa&size=400&background=6366f1&color=fff&bold=true&font-size=0.33'">
+                    </div>
+                    <div class="photo-badge badge-top">
+                        <i class="fa-brands fa-python"></i>
+                    </div>
+                    <div class="photo-badge badge-bottom">
+                        <i class="fa-brands fa-react"></i>
+                    </div>
+                </div>
+                <div class="about-info">
+                    <h2 class="section-title">Crafting Digital <span class="grad-text">Experiences</span></h2>
+                    <p class="about-text">
+                        I'm a final year B.Tech student in Information Technology at <strong>Rajiv Gandhi Institute of Petroleum Technology (RGIPT)</strong>. I love turning ideas into reality through clean code, elegant UI, and smart algorithms.
+                    </p>
+                    <p class="about-text">
+                        Beyond code, I've led large-scale events, mentored students, and collaborated with industry giants like SBI for sponsorships — building both technical and leadership muscles.
+                    </p>
+                    <div class="about-details">
+                        <div class="detail-item">
+                            <i class="fa-solid fa-phone"></i>
+                            <span>+91-7597819982</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>22it3027@rgipt.ac.in</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>ghunawatnitesh574@gmail.com</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>RGIPT, Jais, Amethi, UP</span>
+                        </div>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat-box">
+                            <span class="stat-val" data-count="1000">0</span><span class="stat-val">+</span>
+                            <span class="stat-key">Event Participants</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-val" data-count="4">0</span><span class="stat-val">L+</span>
+                            <span class="stat-key">Sponsorship Raised</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-val" data-count="300">0</span><span class="stat-val">+</span>
+                            <span class="stat-key">Students Taught</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="bg-text-large">SKILLS</div>
+        <div class="container">
+            <div class="section-label"><span class="label-num">02</span> Technical Skills</div>
+            <h2 class="section-title text-center">My <span class="grad-text">Tech Stack</span></h2>
+
+            <div class="skills-grid">
+                <!-- Programming Languages -->
+                <div class="skill-card" data-delay="0">
+                    <div class="skill-card-icon"><i class="fa-solid fa-code"></i></div>
+                    <h3>Languages</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><i class="fa-brands fa-python"></i> Python</span>
+                        <span class="skill-tag">C</span>
+                        <span class="skill-tag"><i class="fa-brands fa-js"></i> JavaScript</span>
+                        <span class="skill-tag"><i class="fa-solid fa-database"></i> SQL</span>
+                    </div>
+                </div>
+
+                <!-- Frameworks -->
+                <div class="skill-card" data-delay="100">
+                    <div class="skill-card-icon"><i class="fa-solid fa-layer-group"></i></div>
+                    <h3>Frameworks</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><i class="fa-brands fa-react"></i> ReactJS</span>
+                        <span class="skill-tag"><i class="fa-brands fa-node-js"></i> Node.js</span>
+                        <span class="skill-tag">Express.js</span>
+                        <span class="skill-tag">Pandas</span>
+                    </div>
+                </div>
+
+                <!-- Tools & OS -->
+                <div class="skill-card" data-delay="200">
+                    <div class="skill-card-icon"><i class="fa-solid fa-wrench"></i></div>
+                    <h3>Tools & OS</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><i class="fa-brands fa-git-alt"></i> Git</span>
+                        <span class="skill-tag">Power BI</span>
+                        <span class="skill-tag">Tableau</span>
+                        <span class="skill-tag">AutoCAD</span>
+                        <span class="skill-tag">Excel</span>
+                        <span class="skill-tag">Seaborn</span>
+                    </div>
+                </div>
+
+                <!-- Domains -->
+                <div class="skill-card" data-delay="300">
+                    <div class="skill-card-icon"><i class="fa-solid fa-brain"></i></div>
+                    <h3>Domains</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Web Dev</span>
+                        <span class="skill-tag">Machine Learning</span>
+                        <span class="skill-tag">AI</span>
+                        <span class="skill-tag">DBMS</span>
+                        <span class="skill-tag">OS</span>
+                        <span class="skill-tag">DSA</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skill Bars -->
+            <div class="skill-bars">
+                <div class="skill-bar-item">
+                    <div class="skill-bar-label"><span>Python</span><span>85%</span></div>
+                    <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div>
+                </div>
+                <div class="skill-bar-item">
+                    <div class="skill-bar-label"><span>JavaScript / React</span><span>80%</span></div>
+                    <div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div>
+                </div>
+                <div class="skill-bar-item">
+                    <div class="skill-bar-label"><span>Node.js / Express</span><span>75%</span></div>
+                    <div class="skill-bar-track"><div class="skill-bar-fill" data-width="75"></div></div>
+                </div>
+                <div class="skill-bar-item">
+                    <div class="skill-bar-label"><span>SQL / Databases</span><span>70%</span></div>
+                    <div class="skill-bar-track"><div class="skill-bar-fill" data-width="70"></div></div>
+                </div>
+                <div class="skill-bar-item">
+                    <div class="skill-bar-label"><span>Data Analytics / ML</span><span>65%</span></div>
+                    <div class="skill-bar-track"><div class="skill-bar-fill" data-width="65"></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="education" id="education">
+        <div class="container">
+            <div class="section-label"><span class="label-num">03</span> Education</div>
+            <h2 class="section-title">Academic <span class="grad-text">Journey</span></h2>
+
+            <div class="edu-timeline">
+                <div class="edu-card active-edu" data-aos>
+                    <div class="edu-card-glow"></div>
+                    <div class="edu-year">2022 – 2026</div>
+                    <div class="edu-degree">B.Tech – Information Technology</div>
+                    <div class="edu-institute">
+                        <i class="fa-solid fa-university"></i>
+                        Rajiv Gandhi Institute of Petroleum Technology
+                    </div>
+                    <div class="edu-grade">CGPA: <strong>6.02</strong></div>
+                    <div class="edu-tag">Current</div>
+                </div>
+
+                <div class="edu-connector">
+                    <div class="connector-line"></div>
+                    <div class="connector-dot"></div>
+                </div>
+
+                <div class="edu-card" data-aos>
+                    <div class="edu-year">2021</div>
+                    <div class="edu-degree">Senior Secondary (XII)</div>
+                    <div class="edu-institute">
+                        <i class="fa-solid fa-school"></i>
+                        RBSE Board
+                    </div>
+                    <div class="edu-grade">Percentage: <strong>90.60%</strong></div>
+                    <div class="edu-tag">Completed</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience" id="experience">
+        <div class="bg-text-large">EXPERIENCE</div>
+        <div class="container">
+            <div class="section-label"><span class="label-num">04</span> Experience</div>
+            <h2 class="section-title">What I've <span class="grad-text">Done</span></h2>
+
+            <div class="exp-timeline">
+                <!-- Experience 1: Teaching Volunteer -->
+                <div class="exp-item" data-aos>
+                    <div class="exp-left">
+                        <div class="exp-date">Oct 2023 – Aug 2024</div>
+                        <div class="exp-org">RGIPT, Jais Campus</div>
+                    </div>
+                    <div class="exp-dot-col">
+                        <div class="exp-dot"><i class="fa-solid fa-chalkboard-teacher"></i></div>
+                        <div class="exp-line"></div>
+                    </div>
+                    <div class="exp-right">
+                        <h3>Teaching Volunteer – Gyanarpan</h3>
+                        <p><em>"Gyanarpan"</em> is an initiative by RGIPT, Amethi, providing free and quality education to <strong>300+ underprivileged students</strong> in the region. Volunteered as a teacher, making a real social impact.</p>
+                        <div class="exp-badges">
+                            <span>Teaching</span>
+                            <span>Community Service</span>
+                            <span>CSR</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience 2: Overall Fest Coordinator -->
+                <div class="exp-item" data-aos>
+                    <div class="exp-left">
+                        <div class="exp-date">April 2025</div>
+                        <div class="exp-org">RGIPT, Jais Campus</div>
+                    </div>
+                    <div class="exp-dot-col">
+                        <div class="exp-dot"><i class="fa-solid fa-star"></i></div>
+                        <div class="exp-line"></div>
+                    </div>
+                    <div class="exp-right">
+                        <h3>Overall Head – Kaltarang (Annual Cultural Festival)</h3>
+                        <p>Led end-to-end event planning, coordination, and execution for RGIPT's annual cultural festival <em>'Kaltarang'</em>. Gathered sponsorship funds worth over ₹4 Lakhs, engaging <strong>1000+ participants</strong> from different colleges and ensuring smooth operations.</p>
+                        <div class="exp-badges">
+                            <span>Event Management</span>
+                            <span>Leadership</span>
+                            <span>Sponsorship</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience 3: IPR Workshop -->
+                <div class="exp-item" data-aos>
+                    <div class="exp-left">
+                        <div class="exp-date">IPR Workshop</div>
+                        <div class="exp-org">NIPAM, India</div>
+                    </div>
+                    <div class="exp-dot-col">
+                        <div class="exp-dot"><i class="fa-solid fa-certificate"></i></div>
+                        <div class="exp-line"></div>
+                    </div>
+                    <div class="exp-right">
+                        <h3>IPR Workshop Participant</h3>
+                        <p>Organized by the <strong>Intellectual Property Office, India</strong>, under the National Intellectual Property Awareness Mission (NIPAM) – gaining in-depth knowledge of intellectual property rights.</p>
+                        <div class="exp-badges">
+                            <span>IPR</span>
+                            <span>NIPAM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <div class="section-label"><span class="label-num">05</span> Projects</div>
+            <h2 class="section-title">Things I've <span class="grad-text">Built</span></h2>
+
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card featured" data-aos>
+                    <div class="project-card-glow"></div>
+                    <div class="project-top">
+                        <div class="project-icon"><i class="fa-solid fa-hotel"></i></div>
+                        <div class="project-links">
+                            <a href="https://github.com/niteshbairwa123" target="_blank" rel="noopener" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                            <a href="#" title="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <h3>Hotel Booking System</h3>
+                    <p>A data-driven hotel booking system analyzing over <strong>119K records</strong> for actionable business insights. Leveraged Python and data visualization libraries (Pandas, Seaborn) to power the analytics engine.</p>
+                    <div class="project-stack">
+                        <span>Python</span>
+                        <span>Pandas</span>
+                        <span>Seaborn</span>
+                        <span>SQL</span>
+                    </div>
+                    <div class="project-dates">Apr 2024 – May 2024</div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card" data-aos>
+                    <div class="project-top">
+                        <div class="project-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+                        <div class="project-links">
+                            <a href="https://github.com/niteshbairwa123" target="_blank" rel="noopener" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                            <a href="#" title="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <h3>E-Commerce Website</h3>
+                    <p>Full-stack e-commerce platform built with modern web technologies including React for a dynamic front-end, Node.js & Express for a robust API backend, and MongoDB as the database.</p>
+                    <div class="project-stack">
+                        <span>React</span>
+                        <span>Node.js</span>
+                        <span>Express</span>
+                        <span>MongoDB</span>
+                        <span>HTML/CSS</span>
+                    </div>
+                    <div class="project-dates">Jul 2025 – Aug 2025</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section class="achievements" id="achievements">
+        <div class="bg-text-large">WINS</div>
+        <div class="container">
+            <div class="section-label"><span class="label-num">06</span> Achievements</div>
+            <h2 class="section-title">Key <span class="grad-text">Highlights</span></h2>
+
+            <div class="achievements-grid">
+                <div class="ach-card" data-aos>
+                    <div class="ach-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                    <h3>JEE Advanced 2022</h3>
+                    <p>Qualified JEE Advanced 2022 — one of the toughest engineering entrance exams in the world.</p>
+                </div>
+                <div class="ach-card" data-aos>
+                    <div class="ach-icon"><i class="fa-solid fa-handshake"></i></div>
+                    <h3>₹4 Lakh+ Sponsorship</h3>
+                    <p>Collaborated with <strong>SBI</strong> to secure Title Sponsorship worth over ₹4 Lakhs for Kaltarang 2025.</p>
+                </div>
+                <div class="ach-card" data-aos>
+                    <div class="ach-icon"><i class="fa-solid fa-users"></i></div>
+                    <h3>1000+ Event Participants</h3>
+                    <p>Organized and managed RGIPT's annual cultural festival engaging 1000+ students from multiple colleges.</p>
+                </div>
+                <div class="ach-card" data-aos>
+                    <div class="ach-icon"><i class="fa-solid fa-certificate"></i></div>
+                    <h3>IPR Certification</h3>
+                    <p>Completed workshop under the National Intellectual Property Awareness Mission (NIPAM), India.</p>
+                </div>
+            </div>
+
+            <!-- Positions of Responsibility -->
+            <div class="positions-section">
+                <h3 class="positions-title">Positions of Responsibility</h3>
+                <div class="positions-list">
+                    <div class="position-item">
+                        <div class="pos-dot"></div>
+                        <div>
+                            <strong>Overall Event Head</strong> – Kaltarang'25, Annual Cultural Festival of RGIPT
+                        </div>
+                    </div>
+                    <div class="position-item">
+                        <div class="pos-dot"></div>
+                        <div>
+                            <strong>POC (Point of Contact)</strong> – Kaltarang'24, Annual Cultural Festival of RGIPT
+                        </div>
+                    </div>
+                    <div class="position-item">
+                        <div class="pos-dot"></div>
+                        <div>
+                            <strong>Teaching Volunteer</strong> – Gyanarpan, RGIPT (Oct 2023 – Aug 2024)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hobbies Section -->
+    <section class="hobbies" id="hobbies">
+        <div class="bg-text-large">PASSION</div>
+        <div class="container">
+            <div class="section-label"><span class="label-num">07</span> Hobbies &amp; Interests</div>
+            <h2 class="section-title">Beyond <span class="grad-text">Code</span></h2>
+
+            <div class="hobbies-layout">
+                <!-- Main Hobby Card: Singing -->  
+                <div class="hobby-main-card" data-aos>
+                    <div class="hobby-main-bg"></div>
+                    <div class="hobby-mic-anim">
+                        <div class="mic-rings">
+                            <div class="mic-ring r1"></div>
+                            <div class="mic-ring r2"></div>
+                            <div class="mic-ring r3"></div>
+                        </div>
+                        <div class="mic-icon"><i class="fa-solid fa-microphone"></i></div>
+                    </div>
+                    <div class="hobby-main-info">
+                        <span class="hobby-badge"><i class="fa-solid fa-music"></i> Passion</span>
+                        <h3>Singing &amp; Vocal Performance</h3>
+                        <p>
+                            Music is my second language. From classical melodies to Bollywood hits, I pour my heart into every performance. Singing keeps me grounded, energized, and emotionally connected — a perfect counterbalance to the logical world of code.
+                        </p>
+                        <div class="hobby-tags">
+                            <span><i class="fa-solid fa-record-vinyl"></i> Bollywood</span>
+                            <span><i class="fa-solid fa-guitar"></i> Semi-Classical</span>
+                            <span><i class="fa-solid fa-star"></i> Stage Performance</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Singing Achievements -->
+                <div class="hobby-achievements">
+                    <div class="hob-ach-card" data-aos>
+                        <div class="hob-ach-top">
+                            <div class="hob-trophy"><i class="fa-solid fa-trophy"></i></div>
+                            <div class="hob-rank">1<sup>st</sup> Place</div>
+                        </div>
+                        <h4>Winner – Singing Competition</h4>
+                        <p>Bagged the <strong>1st prize</strong> in the singing competition at RGIPT's Annual Cultural Festival, competing against talented vocalists from across the college.</p>
+                        <div class="hob-label">RGIPT Annual Cultural Fest</div>
+                    </div>
+
+                    <div class="hob-ach-card" data-aos>
+                        <div class="hob-ach-top">
+                            <div class="hob-trophy gold"><i class="fa-solid fa-calendar-star"></i></div>
+                            <div class="hob-rank">Organizer</div>
+                        </div>
+                        <h4>Cultural Fest Organizer</h4>
+                        <p>Organized and led <strong>multiple cultural fests</strong> at RGIPT — curating performances, managing stage events, and creating unforgettable experiences for the college community.</p>
+                        <div class="hob-label">RGIPT · Multiple Editions</div>
+                    </div>
+
+                    <div class="hob-ach-card" data-aos>
+                        <div class="hob-ach-top">
+                            <div class="hob-trophy purple"><i class="fa-solid fa-users"></i></div>
+                            <div class="hob-rank">1000+</div>
+                        </div>
+                        <h4>Audience &amp; Community</h4>
+                        <p>Performed and organized events that captivated <strong>1000+ participants</strong> — blending technical leadership with artistic passion on the same stage.</p>
+                        <div class="hob-label">Kaltarang Cultural Festival</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Other Hobbies Row -->
+            <div class="other-hobbies">
+                <div class="ohobby-item" data-aos>
+                    <div class="ohobby-icon"><i class="fa-solid fa-code"></i></div>
+                    <span>Open Source</span>
+                </div>
+                <div class="ohobby-item" data-aos>
+                    <div class="ohobby-icon"><i class="fa-solid fa-book-open"></i></div>
+                    <span>Reading</span>
+                </div>
+                <div class="ohobby-item" data-aos>
+                    <div class="ohobby-icon"><i class="fa-solid fa-chart-line"></i></div>
+                    <span>Data Exploration</span>
+                </div>
+                <div class="ohobby-item" data-aos>
+                    <div class="ohobby-icon"><i class="fa-solid fa-microphone-lines"></i></div>
+                    <span>Karaoke &amp; Covers</span>
+                </div>
+                <div class="ohobby-item" data-aos>
+                    <div class="ohobby-icon"><i class="fa-solid fa-chess"></i></div>
+                    <span>Chess</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-label"><span class="label-num">08</span> Contact</div>
+            <h2 class="section-title text-center">Let's <span class="grad-text">Connect</span></h2>
+            <p class="contact-sub text-center">Open to internships, collaborations, or just a friendly chat about tech!</p>
+
+            <div class="contact-layout">
+                <div class="contact-info-panel">
+                    <div class="contact-info-item">
+                        <div class="cinfo-icon"><i class="fa-solid fa-phone"></i></div>
+                        <div>
+                            <span class="cinfo-label">Phone</span>
+                            <a href="tel:+917597819982" class="cinfo-val">+91-7597819982</a>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="cinfo-icon"><i class="fa-solid fa-envelope"></i></div>
+                        <div>
+                            <span class="cinfo-label">College Email</span>
+                            <a href="mailto:22it3027@rgipt.ac.in" class="cinfo-val">22it3027@rgipt.ac.in</a>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="cinfo-icon"><i class="fa-solid fa-envelope-open"></i></div>
+                        <div>
+                            <span class="cinfo-label">Personal Email</span>
+                            <a href="mailto:ghunawatnitesh574@gmail.com" class="cinfo-val">ghunawatnitesh574@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-social-links">
+                        <a href="https://github.com/niteshbairwa123" target="_blank" rel="noopener" class="csocial-btn">
+                            <i class="fa-brands fa-github"></i> GitHub
+                        </a>
+                        <a href="https://www.linkedin.com/in/nitesh-bairwa-9201ab259/" target="_blank" rel="noopener" class="csocial-btn">
+                            <i class="fa-brands fa-linkedin"></i> LinkedIn
+                        </a>
+                        <a href="https://www.instagram.com/niteshghunawat0786" target="_blank" rel="noopener" class="csocial-btn">
+                            <i class="fa-brands fa-instagram"></i> Instagram
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-form-panel">
+                    <form id="contactForm">
+                        <div class="cform-group">
+                            <label for="cName">Name</label>
+                            <input type="text" id="cName" placeholder="Your Name" required>
+                        </div>
+                        <div class="cform-group">
+                            <label for="cEmail">Email</label>
+                            <input type="email" id="cEmail" placeholder="your@email.com" required>
+                        </div>
+                        <div class="cform-group">
+                            <label for="cMessage">Message</label>
+                            <textarea id="cMessage" rows="5" placeholder="Tell me about your project or just say hi..." required></textarea>
+                        </div>
+                        <button type="submit" class="cform-submit" id="submitBtn">
+                            <span>Send Message</span>
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                        <div id="formMsg" class="form-message"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-logo">NB<span class="logo-dot">.</span></div>
+            <p class="footer-copy">
+                Designed & Built with <i class="fa-solid fa-heart" style="color:#f43f5e"></i> by <strong>Nitesh Bairwa</strong> &copy; <span id="year"></span>
+            </p>
+            <p class="footer-tag">B.Tech IT · RGIPT · Roll No. 22IT3027</p>
+        </div>
+    </footer>
+
+    <!-- Success Toast Popup -->
+    <div class="toast-popup" id="successToast">
+        <div class="toast-icon">
+            <svg viewBox="0 0 52 52" class="toast-checkmark">
+                <circle class="checkmark-circle" cx="26" cy="26" r="25" fill="none"/>
+                <path class="checkmark-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+            </svg>
+        </div>
+        <div class="toast-body">
+            <p class="toast-title">Message Submitted!</p>
+            <p class="toast-sub">Thanks for reaching out. I'll reply soon 🚀</p>
+        </div>
+        <button class="toast-close" id="toastClose" aria-label="Close">✕</button>
+    </div>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
