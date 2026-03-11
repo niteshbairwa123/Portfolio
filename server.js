@@ -12,8 +12,26 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Serve static frontend files
-app.use(express.static(path.join(__dirname)));
+// Serve static frontend files — explicit MIME types for Vercel compatibility
+app.get('/styles.css', (req, res) => {
+    res.setHeader('Content-Type', 'text/css; charset=UTF-8');
+    res.sendFile(path.join(__dirname, 'styles.css'));
+});
+
+app.get('/script.js', (req, res) => {
+    res.setHeader('Content-Type', 'application/javascript; charset=UTF-8');
+    res.sendFile(path.join(__dirname, 'script.js'));
+});
+
+app.use(express.static(path.join(__dirname), {
+    setHeaders: (res, filePath) => {
+        if (filePath.endsWith('.css')) {
+            res.setHeader('Content-Type', 'text/css; charset=UTF-8');
+        } else if (filePath.endsWith('.js')) {
+            res.setHeader('Content-Type', 'application/javascript; charset=UTF-8');
+        }
+    }
+}));
 
 // ─── Initialize Database ───────────────────────────────────────────────────
 const db = new sqlite3.Database('./bookings.db', (err) => {
